@@ -5,6 +5,7 @@
  */
 package auxiliaries;
 
+import java.awt.Color;
 import java.awt.Component;
 import javax.swing.JLabel;
 import javax.swing.JTable;
@@ -27,6 +28,10 @@ public class MyJTableCellRenderer extends DefaultTableCellRenderer{
             JLabel jLabel = (JLabel)o;
             return jLabel;
         }
+        //Creo una celda
+        Component cell = super.getTableCellRendererComponent(jtable, o, bln, bln1, i, i1);
+        //Agrego color de fondo
+        cell.setBackground(Color.yellow);
         return super.getTableCellRendererComponent(jtable, o, bln, bln1, i, i1); //To change body of generated methods, choose Tools | Templates.
     }
     

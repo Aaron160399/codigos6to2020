@@ -6,6 +6,7 @@
 package gui;
 
 import auxiliaries.MyJTableCellRenderer;
+import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -26,6 +27,7 @@ public class JTableImages extends javax.swing.JFrame {
     public JTableImages() {
         initComponents();
         configureTable();
+        jScrollPane1.getViewport().setBackground(Color.yellow);
     }
 
     /**
@@ -69,6 +71,9 @@ public class JTableImages extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTable1.setBackground(new java.awt.Color(255, 102, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -77,6 +82,7 @@ public class JTableImages extends javax.swing.JFrame {
                 "Name", "Phone", "Image"
             }
         ));
+        jTable1.setGridColor(new java.awt.Color(0, 0, 204));
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
